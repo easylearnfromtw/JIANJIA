@@ -4,7 +4,7 @@
 
 兼葭（JIANJIA）是一個以**低設備負載、低伺服器單位時間耗能、跨設備相容與漸進式專業工作流程**為核心的直播製作平台構想。目標從單手機直播一路擴展到跨國 Podcast、新聞台、野外直播、金融直播、歷史重現與 VTuber 演出。
 
-## ⚠️ 目前版本：UI Prototype v0.2
+## ⚠️ 目前版本：UI Prototype v0.3
 
 **本 Repository 的初版僅包含可互動的靜態使用者介面。** 不含真實攝影機／麥克風接入、WebRTC、直播推流、錄製、伺服器、帳號系統、雲端運算、空拍機連線、真實安全延遲、新聞資料或動作捕捉。畫面上的狀態、節點、節能策略與工作階段均為本機示意。不可將此版本用於正式直播或安全關鍵場景。
 
@@ -18,6 +18,16 @@
 - **零外部 UI 套件依賴**，維持 GitHub Pages 靜態部署與低資源使用。
 - 設計參考 Apple Human Interface Guidelines 的 tab bars 與 Liquid Glass 原則；使用自製 CSS，**未複製 Apple 專有程式碼、商標圖示或設計素材**。參考：https://developer.apple.com/design/human-interface-guidelines/tab-bars 與 https://developer.apple.com/design/human-interface-guidelines/materials
 - 本版仍是**純 UI 展示**，不提供真實直播、錄影、硬體接入或後端節能控制。
+
+## v0.3 — 以競品與認知心理學為依據的穩定導播工作台
+
+- 參考 OBS Studio 與 vMix 的固定 Preview / Program 工作流程。
+- Studio 新增「快速工具」，以右側抽屜存取來源、AudioDesk、播出與 EcoStream，**不必為次要設定離開工作台**。
+- 移除不必要的頁面跳入動畫，避免選取 Dock 時產生視覺位移。
+- 持續顯示 PGM 示意狀態與「非真實直播」提示。
+- 整理 **20 篇可追溯 DOI 的心理學與人因論文／學術綜述**，逐篇列出對應的設計推論；並非實際使用者實驗。
+- 研究文件：[docs/UX_RESEARCH_20_PAPERS.md](docs/UX_RESEARCH_20_PAPERS.md)。
+- 此版仍為 UI Prototype；完整的即時導播、音訊及設備接入尚未實作。
 
 ### 快速開啟
 
