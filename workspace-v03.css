@@ -1,0 +1,31 @@
+/* v0.3 Stable Broadcast Workspace — overlays, no context-switching */
+:root{--jj-blue:#176bd7;--jj-ink:#172438;--jj-border:#e4e9f1}
+body{overflow-x:hidden}
+header{position:sticky;top:0;z-index:25;background:rgba(248,250,252,.95)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--jj-border);padding-top:12px!important;padding-bottom:12px!important}
+#studio .toolbar{margin-top:12px}
+#studio .studio-grid{align-items:start}
+#studio .screens{min-width:0}
+#studio .screen{min-width:0}
+#studio .sidepanel{position:sticky;top:96px}
+#nav{max-width:calc(100vw - 20px)}
+#nav .nav{transition:background-color .16s,color .16s!important;transform:none!important}
+#nav .nav.active{transform:none!important}
+.page{animation:none!important}
+.jj-quickbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:12px 0 18px;padding:11px;background:#fff;border:1px solid #e3eaf2;border-radius:16px}
+.jj-quickbar .jj-caption{font-size:12px;font-weight:700;color:#64748b;margin-right:4px}
+.jj-quickbar button,.jj-drawer button.jj-close{background:#f1f6fc;border:1px solid #e2e9f2;border-radius:10px;color:#244c7d;padding:10px 12px;font-weight:650}
+.jj-quickbar button:focus-visible,.jj-drawer button:focus-visible{outline:3px solid #75b1ff;outline-offset:2px}
+.jj-quickbar button[aria-expanded=true]{background:#e2f0ff;color:#0d5cb9}
+.jj-drawer-backdrop{position:fixed;inset:0;background:rgba(18,32,52,.18);z-index:1090}
+.jj-drawer{position:fixed;right:0;top:0;bottom:0;width:min(430px,100vw);z-index:1100;background:#fff;color:#172438;box-shadow:-12px 0 50px rgba(19,37,60,.15);display:flex;flex-direction:column;overflow:auto;padding:24px 22px 120px}
+.jj-drawer-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid #e5eaf0}
+.jj-drawer h2{font-size:21px;margin:0}
+.jj-drawer p{color:#63768b;font-size:13px;line-height:1.6}
+.jj-drawer .jj-inner{padding-top:16px}
+.jj-drawer .jj-inner .card{margin-bottom:12px}
+.jj-drawer .jj-inner input[type=range]{width:100%}
+.jj-drawer[hidden],.jj-drawer-backdrop[hidden]{display:none!important}
+.jj-pinned-status{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:12px;color:#52667c}
+.jj-pinned-status strong{color:#172438}
+.jj-pinned-status .jj-onair{color:#b42338;font-weight:800}
+@media(max-width:800px){header{position:relative}#studio .sidepanel{position:static}.jj-quickbar{gap:6px}.jj-quickbar button{flex:1 1 42%;font-size:12px}.jj-drawer{padding-bottom:110px}}
