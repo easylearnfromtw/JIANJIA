@@ -1,0 +1,36 @@
+
+/* JIANJIA v0.2 — white canvas, Apple-inspired floating dock. Original UI preserved. */
+:root{color-scheme:light!important;background:#f7f8fa!important;color:#17202d!important;--ink:#17202d;--muted:#697789;--line:#e5eaf0;--surface:#fff}
+html{scroll-behavior:smooth}body{background:#f7f8fa!important;color:var(--ink)!important}
+.shell{display:block!important;min-height:100vh}
+.sidebar{position:relative!important;top:auto!important;width:100%!important;height:auto!important;display:flex!important;flex-direction:row!important;align-items:center!important;padding:16px clamp(18px,4vw,48px)!important;background:rgba(255,255,255,.94)!important;border-right:0!important;border-bottom:1px solid var(--line)!important;z-index:3}
+.brand{padding:0!important;gap:12px!important}.brand strong{color:#142239!important}.brand small{color:#8190a1!important}
+.mark{background:linear-gradient(145deg,#176de0,#8dc9ff)!important;color:white!important}
+.section-label,.aside-bottom{display:none!important}
+#nav{position:fixed!important;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);display:flex!important;align-items:center;justify-content:center;gap:4px;max-width:calc(100vw - 22px);width:max-content;padding:8px!important;background:rgba(255,255,255,.83)!important;backdrop-filter:blur(26px) saturate(175%);-webkit-backdrop-filter:blur(26px) saturate(175%);border:1px solid rgba(255,255,255,.92)!important;border-radius:26px;box-shadow:0 14px 44px rgba(39,65,98,.17),0 2px 9px rgba(39,65,98,.06);z-index:1000;overflow-x:auto;scrollbar-width:none}
+#nav::-webkit-scrollbar{display:none}
+#nav .nav{flex:0 0 auto;width:auto!important;min-width:64px;margin:0!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:3px!important;padding:9px 11px!important;border-radius:19px!important;background:transparent!important;color:#68778b!important;font-size:19px;line-height:1.1;transition:background .2s,transform .2s,color .2s}
+#nav .nav span{font-size:10px;white-space:nowrap;font-weight:600}
+#nav .nav.active{background:#eaf3ff!important;color:#1266d6!important;transform:translateY(-2px)}
+#nav .nav:focus-visible{outline:3px solid #3282e8;outline-offset:2px}
+main{width:100%!important;max-width:1500px;margin:0 auto;padding-bottom:130px!important}
+header{background:transparent!important;color:#17202d!important}
+h1,h2,h3,strong{color:inherit}
+.card,.source-card,.screen,.toolbar,.notice,.pill,.status,.module,.source-row{border-color:#e4e9f1!important}
+.card,.source-card,.toolbar{background:#fff!important;color:#192538!important;box-shadow:0 5px 20px rgba(33,61,93,.035)}
+.notice{background:#edf5ff!important;color:#3c628f!important}
+.muted,.eyebrow,.section-label,.screen-foot,.metric span{color:#748396!important}
+select,input:not([type=checkbox]):not([type=radio]):not([type=range]){background:#fff!important;color:#1a2737!important;border-color:#dce5f0!important}
+button.ghost,.source-row button{background:#fff!important;color:#245b9e!important;border:1px solid #dce6f2!important}
+.primary{background:#176bd7!important;color:white!important}
+.danger-outline{background:#fff!important;color:#bd3b49!important}
+.tag.blue,.pill{background:#eff5fc!important;color:#326da9!important}
+.status{background:#eef7f3!important;color:#27815c!important}
+.screen{background:#0e192a!important;color:#e8f1ff!important}
+.screen .screen-head,.screen .screen-foot,.screen .screen-art{color:#e8f1ff!important}
+.source-icon{color:#2672d8!important}
+.page{animation:page-in .24s ease-out}
+@keyframes page-in{from{opacity:.3;transform:translateY(7px)}to{opacity:1;transform:none}}
+footer{color:#8b98aa!important}
+@media(max-width:700px){.sidebar{padding:12px 18px!important}.brand small{font-size:8px}#nav{width:calc(100vw - 22px);justify-content:space-around;padding:6px!important;border-radius:22px}#nav .nav{min-width:0!important;flex:1 0 0;padding:9px 3px!important;font-size:18px}#nav .nav span{font-size:9px;letter-spacing:-.4px}main{padding-bottom:130px!important}}
+@media(prefers-reduced-motion:reduce){.page,#nav .nav{animation:none!important;transition:none!important}}
