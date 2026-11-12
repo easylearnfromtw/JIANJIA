@@ -4,19 +4,30 @@
 
 兼葭（JIANJIA）是一個以**低設備負載、低伺服器單位時間耗能、跨設備相容與漸進式專業工作流程**為核心的直播製作平台構想。目標從單手機直播一路擴展到跨國 Podcast、新聞台、野外直播、金融直播、歷史重現與 VTuber 演出。
 
-## ⚠️ 目前版本：UI Prototype v0.1
+## ⚠️ 目前版本：UI Prototype v0.2
 
 **本 Repository 的初版僅包含可互動的靜態使用者介面。** 不含真實攝影機／麥克風接入、WebRTC、直播推流、錄製、伺服器、帳號系統、雲端運算、空拍機連線、真實安全延遲、新聞資料或動作捕捉。畫面上的狀態、節點、節能策略與工作階段均為本機示意。不可將此版本用於正式直播或安全關鍵場景。
 
+## UI v0.2 — 白色多頁式設計（2026-11）
+
+- 全站白色／淺灰底色、藍色重點、輕量卡片與清晰對比。
+- 導覽從左側欄改為**下方置中浮動膠囊 Dock**，提供六個工作區入口。
+- 六個可獨立連結的前端頁面：`#/studio`、`#/sources`、`#/audio`、`#/broadcast`、`#/ecostream`、`#/newsroom`。
+- 支援瀏覽器上一頁／下一頁、手機安全區域、鍵盤焦點與減少動態效果偏好。
+- 保留原本 v0.1 的展示互動、來源、AudioDesk、DroneLink、EcoStream 與六種製作情境。
+- **零外部 UI 套件依賴**，維持 GitHub Pages 靜態部署與低資源使用。
+- 設計參考 Apple Human Interface Guidelines 的 tab bars 與 Liquid Glass 原則；使用自製 CSS，**未複製 Apple 專有程式碼、商標圖示或設計素材**。參考：https://developer.apple.com/design/human-interface-guidelines/tab-bars 與 https://developer.apple.com/design/human-interface-guidelines/materials
+- 本版仍是**純 UI 展示**，不提供真實直播、錄影、硬體接入或後端節能控制。
+
 ### 快速開啟
 
-1. 直接以瀏覽器開啟 `index.html`，或部署三個檔案到 GitHub Pages。
-2. 在 GitHub Repository 的 **Settings → Pages** 選擇 **Deploy from a branch**，選擇 `main` / `(root)`。
+1. 直接以瀏覽器開啟 `index.html`，或部署整個靜態專案到 GitHub Pages。
+2. 在 GitHub Repository 的 **Settings → Pages** 選擇 **GitHub Actions**（Repository 已包含 `.github/workflows/pages.yml`）。
 3. 不需 Node.js、資料庫、金鑰或伺服器。此方式**僅能使用前端展示介面**。
 
 ### 本次已完成的前端互動
 
-- 深色響應式導播控制台、手機版排版
+- 白色響應式導播控制台、底部浮動 Dock、六個可獨立連結的前端頁面
 - 六種製作場景切換及對應模組顯示
 - Preview / Program 示意畫面與 TAKE 按鈕
 - 安全備援畫面示意切換
